@@ -41,7 +41,7 @@ def main():
 
     st.title("Fire Detection App")
 
-    ###PARTIE WEBCAM###
+    ############################PARTIE WEBCAM##################################
 
     st.title("Webcam Live Feed")        #ouverture de la webcam quand la checkbox 'run' est cochée
     run = st.checkbox('Run')
@@ -77,7 +77,7 @@ def main():
     else:
         st.write('Stopped')
 
-    ### Front et choix de l'action voulue ###
+    #################### Front et choix de l'action voulue ######################
 
     activities = ["Detection","About"]
     choice = st.sidebar.selectbox("Select Activty",activities)
@@ -88,7 +88,7 @@ def main():
         image_file = st.file_uploader("Upload Image",type=['jpg','png','jpeg'])
         video_file = st.file_uploader("Upload Video",type=['mp4'])
         if image_file is not None :
-            ### PARTIE IMAGE ###
+            #################################### PARTIE IMAGE #########################################
             our_image = Image.open(image_file)
             st.text("Original Image")
             # st.write(type(our_image))
@@ -100,7 +100,7 @@ def main():
                 st.image(result_img)
 
         if video_file is not None :
-            ### PARTIE VIDEO ###
+            #################################### PARTIE VIDEO #######################################
             st.title("Video Feed")
             live = st.checkbox('launch')
             FRAME_WINDOW = st.image([])
