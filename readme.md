@@ -31,6 +31,7 @@ Pour la lancer il faut exécuter la commande `streamlit run detec_feu.py` dans u
 	- tempfile
 
 ### Le chargement du modèle :
+le modèle est trouvable [ici](https://drive.google.com/drive/folders/1cefdn9EdQa0LoHe1_xhoLGKKvT3vfGjz?usp=sharing)
 
 le modèle est chargé avec la commande `model = torch.hub.load('ultralytics/yolov5', 'custom', 'best.onnx')
 le fichier ``best.onnx` contient le modèle et ses poids
@@ -47,3 +48,4 @@ La détection via webcam et sur vidéo fonctionne de la même façon que pour le
 ## Performance :
 
 Les données sur les performance du modèle se trouvent dans le dossier `analytics`
+
